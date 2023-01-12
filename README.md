@@ -26,12 +26,10 @@
    git clone https://github.com/xdotcommer/co-notifications
 2. Setup rails app and database 
     ```
-   cd co-notifications
    bundle install
    rake db:create
    rake db:migrate
-   rake db:seed
-   
+   rake db:seed   
 
 # Running tests
     bin/rspec
