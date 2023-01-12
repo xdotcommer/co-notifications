@@ -8,9 +8,30 @@
     We use encrypted credentials per environment with separate RAILS_MASTER_KEYs (which are stored in a shared LastPass folder named "Shared-CT Notifications").
     To edit credentials, use `RAILS_MASTER_KEY=<<Value from LastPass specifice to environment>> bin/rails credentials:edit --environment <<environment_name>>`.
 
-# Database creation/initialization
-    bin/rails db:create
-    bin/rails db:seed
+# General Setup
+1. Install Homebrew: https://brew.sh/
+1. Install RBENV: https://github.com/rbenv/rbenv
+1. Setup the right version of ruby
+    ```
+   rbenv install 3.0.4
+   rbenv local 3.0.4
+1. Install postgres with rbenv:  
+    ```
+   brew install postgresql
+1. Start postgres: 
+    ```
+   brew services start postgresql
+1. Clone the repo
+    ```
+   git clone https://github.com/xdotcommer/co-notifications
+2. Setup rails app and database 
+    ```
+   cd co-notifications
+   bundle install
+   rake db:create
+   rake db:migrate
+   rake db:seed
+   
 
 # Running tests
     bin/rspec

@@ -98,7 +98,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_15_231656) do
     t.jsonb "opt_out_response", default: {}, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.jsonb "help_keywords", null: false
+    t.jsonb "help_keywords", default: [], null: false
     t.jsonb "help_response", default: {}, null: false
   end
 
